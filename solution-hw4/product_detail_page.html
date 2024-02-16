@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    
+    <title>Product Detail</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/product_detail.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Heading -->
+    
+    <div class="header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="product_gallery.html">
+              <img src="../assets/logo/logo-01.svg" alt="Logo">
+          </a>
+        </div>
+    
+        <div class="right-content">
+          <div class="menu">
+            <a href="product_gallery.html">
+              <p><span class="highlight">PRODUCTS</span></p>
+            </a>
+            <a href="shopping_cart.html">
+              <p>CART <span class="notification-bubble">2</span></p>
+            </a>  
+          </div>
+          
+          <hr class="head-line">    
+
+        </div>
+
+      </div>
+
+      <div class="title-line-detail">
+        <p>Original Cinnamon Roll</p>
+      </div>
+    </div>
+
+    <!-- Customization -->
+
+    <div class="product-customization">
+
+      <img class="product-image-customization" 
+            src="../assets/products/original-cinnamon-roll.jpg" 
+            alt="Original cinnamon roll">
+      
+      <div class="customization">
+        
+        <p class="description">Customize our delicious, hand-made cinnamon roll to your liking!</p>
+        
+        <label for="glazing">Glazing:</label>
+        <select id="glazing" 
+                name="glazing"
+                onchange="glazingChange(this)">
+          <option value="Keep original">Keep original</option>
+          <option value="Sugar milk">Sugar milk</option>
+          <option value="Vanilla milk">Vanilla milk</option>
+          <option value="Double chocolate">Double chocolate</option>
+        </select>
+      
+        <label for="pack-size">Pack size:</label>
+        <select id="pack-size" 
+                name="pack-size"
+                onchange="packsizeChange(this)">
+          <option value="1">1</option>
+          <option value="3">3</option>
+          <option value="6">6</option>
+          <option value="12">12</option>
+        </select>
+      
+        <div class="price-section">
+          <span id="price">$ 2.49</span>
+          <button type="button" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+      </div>
+   
+    </div>
+
+  </body>
+</html>
