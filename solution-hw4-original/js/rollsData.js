@@ -25,27 +25,29 @@ const rolls = {
     }    
 };
 
-let cart = [];
+// Redirect to product_detail_page.html?roll=rollType
+function redirectToDetailPage(rollType) {
+    if(rolls[rollType]) { 
+        const url = `product_detail_page.html?roll=${encodeURIComponent(rollType)}`;
+        window.location.href = url; 
+    } else {
+        console.error('Roll type does not exist:', rollType);
+    }
+}
 
 // Get Roll Type
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString);
 var rollType = params.get('roll')|| 'Original';; 
 
-// Update Roll Name
+// Title Line
 const titleElement = document.querySelector('.title-line-detail p');
 if (titleElement) {
     titleElement.textContent = `${rollType} Cinnamon Roll`;
 }
 
-// Update Roll Base Price
-const basePrice = rolls[rollType].basePrice;
-const priceElement = document.getElementById('price');
-if (priceElement) {
-    priceElement.innerText = `$ ${basePrice.toFixed(2)}`;
-}
-
-// Update Roll Image
+// Image
+console.log('rollType:', rollType);
 const imageName = rolls[rollType].imageFile; 
 const imagePath = `../assets/products/${imageName}`;
 const imageElement = document.querySelector('.product-image-customization');
@@ -53,25 +55,3 @@ if (imageElement) {
     imageElement.src = imagePath;
     imageElement.alt = `${rollType} cinnamon roll`; 
 }
-
-// Add to Cart
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing = rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
-}
-
-document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
-    const rollType = params.get('roll'); 
-    const glazing = glazingSelect.value;
-    const packSize = packSizeSelect.value;
-    const basePrice = rolls[rollType].basePrice;
-
-    const newRoll = new Roll(rollType, glazing, packSize, basePrice);
-
-    cart.push(newRoll);
-    console.log(cart);
-});
