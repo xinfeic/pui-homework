@@ -5,43 +5,47 @@ const priceDisplay = document.getElementById('price');
 let glazingPrice = 0; 
 let packPrice = 1; 
 
+// Glazing Options
+const glazingOptions = {
+    "Keep original": 0,
+    "Sugar milk": 0,
+    "Vanilla milk": 0.50,
+    "Double chocolate": 1.50
+};
+
+// Pack Size Options
+const packSizeOptions = {
+    "1": 1,
+    "3": 3,
+    "6": 5,
+    "12": 10
+};
+
+// Populate Glazing Options to the Detail page
+for (let glazing in glazingOptions) {
+    let option = document.createElement("option");
+    option.value = glazingOptions[glazing]; 
+    option.text = glazing; 
+    glazingSelect.appendChild(option);
+}
+
+// Populate Pack Size Options to the Detail page
+for (let size in packSizeOptions) {
+    let option = document.createElement("option");
+    option.value = packSizeOptions[size]; 
+    option.text = size; 
+    packSizeSelect.appendChild(option);
+}
+
+// Cal Total Price When Glazing Size Change
 function glazingChange() {
-
-    switch(glazingSelect.value) {
-        case 'Keep original':
-            glazingPrice = 0;
-            break;
-        case 'Sugar milk':
-            glazingPrice = 0;
-            break;
-        case 'Vanilla milk':
-            glazingPrice = 0.50;
-            break;
-        case 'Double chocolate':
-            glazingPrice = 1.50;
-            break;
-    }
-
+    glazingPrice = parseFloat(glazingSelect.value);
     calPrice();
 }
 
+// Cal Total Price When Pack Size Change
 function packsizeChange() {
-
-    switch(packSizeSelect.value) {
-        case '1':
-            packPrice = 1;
-            break;
-        case '3':
-            packPrice = 3;
-            break;
-        case '6':
-            packPrice = 5; 
-            break;
-        case '12':
-            packPrice = 10;
-            break;
-    }
-
+    packPrice = parseFloat(packSizeSelect.value);
     calPrice();
 }
 

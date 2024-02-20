@@ -56,27 +56,19 @@
       <div class="customization">
         
         <p class="description">Customize our delicious, hand-made cinnamon roll to your liking!</p>
-        
+
         <label for="glazing">Glazing:</label>
         <select id="glazing" 
-                name="glazing"
-                onchange="glazingChange(this)">
-          <option value="Keep original">Keep original</option>
-          <option value="Sugar milk">Sugar milk</option>
-          <option value="Vanilla milk">Vanilla milk</option>
-          <option value="Double chocolate">Double chocolate</option>
+                name="glazing" 
+                onchange="glazingChange()">
         </select>
       
         <label for="pack-size">Pack size:</label>
         <select id="pack-size" 
-                name="pack-size"
-                onchange="packsizeChange(this)">
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
+                name="pack-size" 
+                onchange="packsizeChange()">
         </select>
-      
+
         <div class="price-section">
           <span id="price">$ 2.49</span>
           <button type="button" class="add-to-cart-btn">Add to Cart</button>

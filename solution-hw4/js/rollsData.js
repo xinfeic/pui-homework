@@ -54,7 +54,7 @@ if (imageElement) {
     imageElement.alt = `${rollType} cinnamon roll`; 
 }
 
-// Add to Cart
+// Class Roll
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -64,6 +64,7 @@ class Roll {
     }
 }
 
+// Add New Roll to Cart
 document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
     const rollType = params.get('roll'); 
     const glazing = glazingSelect.value;
