@@ -30,7 +30,10 @@ let cart = [];
 // Get Roll Type
 const queryString = window.location.search; 
 const params = new URLSearchParams(queryString);
-var rollType = params.get('roll')|| 'Original';; 
+let rollType = params.get('roll');
+if (rollType === null || rollType === undefined) {
+    rollType = 'Original';
+}
 
 // Update Roll Name
 const titleElement = document.querySelector('.title-line-detail p');
@@ -66,13 +69,15 @@ class Roll {
 
 // Add New Roll to Cart
 document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+    
     const rollType = params.get('roll'); 
-    const glazing = glazingSelect.value;
-    const packSize = packSizeSelect.value;
-    const basePrice = rolls[rollType].basePrice;
 
-    const newRoll = new Roll(rollType, glazing, packSize, basePrice);
+    const glazingChoice = glazingSelect.options[glazingSelect.selectedIndex].text; 
+    const packSizeChoice = packSizeSelect.options[packSizeSelect.selectedIndex].text; 
+    const basePrice = rolls[rollType].basePrice; 
+    const newRoll = new Roll(rollType, glazingChoice, packSizeChoice, basePrice);
 
     cart.push(newRoll);
     console.log(cart);
+
 });
