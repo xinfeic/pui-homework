@@ -2,7 +2,6 @@ const glazingSelect = document.getElementById('glazing');
 const packSizeSelect = document.getElementById('pack-size');
 const priceDisplay = document.getElementById('price');
 
-const basePrice = rolls[rollType].basePrice;
 let glazingPrice = 0; 
 let packPrice = 1; 
 
