@@ -23,8 +23,8 @@ function deleteRoll(roll) {
     totalPrice_Cart -= calPrice(roll.basePrice, roll.glazing, roll.size)
     roll.element.remove();
     cart = cart.filter(item => item !== roll);
-    totalPriceDisplay.innerText = `$ ${totalPrice_Cart.toFixed(2)}`;
-  }
+    totalPriceDisplay.innerText = `$ ${Math.abs(totalPrice_Cart).toFixed(2)}`;
+}
 
 // Create an Element on shopping_cart.html
 function createElement(roll) {
@@ -71,7 +71,7 @@ function updateElement(roll) {
     const totalForOne = calPrice(roll.basePrice, roll.glazing, roll.size)
     priceElement.innerText = `$ ${totalForOne.toFixed(2)}`;
 
-  }
+}
 
 // Initialize four rolls in the cart
 const rollOne = addRoll("Original", "Sugar milk", "1", rolls["Original"].basePrice);
