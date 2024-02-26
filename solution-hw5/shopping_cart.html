@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/product_detail.js"></script>
+    <script defer src="js/shopping_cart.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Heading -->
+
+    <div class="header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="product_gallery.html">
+              <img src="../assets/logo/logo-01.svg" alt="Logo">
+          </a>
+        </div>
+    
+        <div class="right-content">
+          <div class="menu">
+            <a href="product_gallery.html">
+              <p>PRODUCTS</p>
+            </a>
+            <a href="shopping_cart.html">
+              <p><span class="highlight">CART</span><span class="notification-bubble">2</span></p>
+            </a>  
+          </div>
+          
+          <hr class="head-line">    
+
+        </div>
+      </div>
+
+      <div class="title-line-gallery">
+        <p>Our hand-made cinnamon rolls</p>
+      </div>
+      
+    </div>
+
+    <!-- Items -->
+
+    <div id="roll-list">
+      <template id="roll-template">
+        <div class="cart-item">
+          <div class="one-item">
+            <img class="product-image-cart" src="" alt="Placeholder Roll Image">
+            <p class="remove">Remove</p>
+          </div>
+          <div class="one-item-information">
+            <p class="roll-type">Placeholder Roll Type</p>
+            <p class="glazing">Placeholder Glazing</p>
+            <p class="pack-size">Placeholder Pack Size</p>
+          </div>
+          <div class="one-item-price">
+            <p class="price">$0.00</p>
+          </div>
+        </div>
+      </template>
+    </div>
+    
+    <!-- Check Out -->
+
+    <div class="check-out">
+      <hr class="split-line">
+      <p class="total-price">Total</p> 
+      <p class="total-price">$ 29.94</p>
+      <button type="button" class="check-out-btn">Checkout</button>
+    </div>
+
+  </body>
+</html>
