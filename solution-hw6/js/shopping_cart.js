@@ -1,8 +1,12 @@
-// List cart and Class Roll is implemented in rollData.js 
-
 const totalPriceElements = document.querySelectorAll('.total-price');
 const totalPriceDisplay = totalPriceElements[1];
 let totalPrice_Cart = 0
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadCartFromLocalStorage(); 
+    cart.forEach(roll => createElement(roll));
+    calculateTotalPrice()
+});
 
 // Calculate total price for one roll
 function calPrice(basePrice, glazingChoice, packSize){
@@ -10,14 +14,22 @@ function calPrice(basePrice, glazingChoice, packSize){
     return (totalPrice);
 }
 
-
+// Calculate total price for all rolls
+function calculateTotalPrice() {
+    totalPrice_Cart = 0; 
+    cart.forEach(roll => {
+        totalPrice_Cart += calPrice(roll.basePrice, roll.glazing, roll.size);
+    });
+    totalPriceDisplay.innerText = `$ ${totalPrice_Cart.toFixed(2)}`;
+}
 
 // Add a Roll to the cart
 function addRoll(rollType, rollGlazing, packSize, basePrice){
     const roll = new Roll(rollType, rollGlazing, packSize, basePrice);
     totalPrice_Cart += (basePrice + glazingOptions[rollGlazing])*packSizeOptions[packSize];
     cart.unshift(roll);
-    totalPriceDisplay.innerText = `$ ${totalPrice_Cart.toFixed(2)}`;
+    calculateTotalPrice();
+    badgeIconIncrease();
 }
 
 // Delete selected Roll from the cart
@@ -25,7 +37,10 @@ function deleteRoll(roll) {
     totalPrice_Cart -= calPrice(roll.basePrice, roll.glazing, roll.size)
     roll.element.remove();
     cart = cart.filter(item => item !== roll);
-    totalPriceDisplay.innerText = `$ ${Math.abs(totalPrice_Cart).toFixed(2)}`;
+    saveCartToLocalStorage();
+    calculateTotalPrice();
+    badgeIconDecrease();
+    console.log('Cart:', JSON.parse(localStorage.getItem('cart')));
 }
 
 // Create an Element on shopping_cart.html
@@ -75,13 +90,9 @@ function updateElement(roll) {
 
 }
 
-// Initialize four rolls in the cart
-const rollOne = addRoll("Original", "Sugar milk", "1", rolls["Original"].basePrice);
-const rollTwo = addRoll("Walnut", "Vanilla milk", "12", rolls["Walnut"].basePrice);
-const rollThree = addRoll("Raisin", "Sugar milk", "3", rolls["Raisin"].basePrice);
-const rollFour = addRoll("Apple", "Keep original", "3", rolls["Apple"].basePrice);
-
 // Iterate over each rolls in the cart
 for (const roll of cart) {
     createElement(roll);
 }
+
+calculateTotalPrice();
