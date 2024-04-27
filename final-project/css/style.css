@@ -1,0 +1,705 @@
+body, h1{
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: "Cormorant", serif;
+}
+
+.section-title{
+    padding-top: 5%;
+    font-family: "Cinzel", serif;
+    font-size: 187.5%;
+    font-weight: normal;
+    margin-left: 5%;
+    letter-spacing: 5px;
+}
+
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff; 
+    z-index: 10; 
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);  
+    
+    padding-top: 1%; 
+    padding-bottom: 1%; 
+    padding-left: 5%;
+
+    p {
+        font-family: "Cinzel", serif;
+        font-size: 30px;
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+
+    a {
+        text-decoration: none; 
+        color: inherit; 
+    }
+
+}
+
+/* Main Page */
+
+.main-container {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-left: 10%;
+    padding-right: 3%;
+    padding-top: 10%
+
+}
+
+.background-square {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    width: 30%;  
+    height: 110%; 
+    background-color: #E4F1F5; 
+    z-index: -1; 
+}
+  
+
+.intro, .profile {
+    
+    flex: 1;
+    z-index: 1;
+}
+  
+.intro {
+
+    margin-right: 20px;
+    font-size: 1.5em;
+
+    .greeting {
+        font-family: "Fuggles", serif;
+        font-size: 2.5em;
+        font-weight: 100;
+    }
+
+    .arrow-down {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        font-size: 24px;
+        margin-left: 10%
+    }
+}
+
+
+.profile {
+
+    text-align: center;
+
+    img {
+        text-align: right;
+        max-width: 70%;
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .fun-fact {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+}
+
+/* About Me */
+
+.about-me-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E4F1F5; 
+    z-index: -1;
+}
+
+.about-me {
+    position: relative;
+}
+
+.about-me-title {
+    position: relative;
+}
+
+.about-me-content {
+    position: relative;
+    margin-top: -5%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+
+.intro-research {
+    width: 194px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 514px;
+    left: 474px;
+    font-family: Cormorant;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+}
+
+.intro-intern {
+    width: 194px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 760px;
+    left: 49px;
+    font-family: Cormorant;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: right;
+}
+
+.intro-overview {
+    width: 272px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 23px;
+    left: 796px;
+    font-family: Cormorant;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: right;
+}
+
+.intro-daily {
+    width: 330px;
+    color: rgba(0,0,0,1);
+    position: relative;
+    top: 520px;
+    left: 730px;
+    font-family: Cormorant;
+    font-weight: Regular;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+}
+
+.alaska {
+    width: 432px;
+    height: 308px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    top: 489px;
+    left: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+
+
+.dallas {
+    width: 369px;
+    height: 553px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 705px;
+    left: 296px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.savannah {
+    width: 417px;
+    height: 621px;
+    display: block; 
+    object-fit: cover; 
+    opacity: 1;
+    position: relative;
+    top: -700px;  
+    left: 34px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.la {
+    width: 493px;
+    height: 316px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 99px;
+    left: 234px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.miami {
+    width: 427px;
+    height: 276px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 516px;
+    left: 773px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+/* Featured Experience */
+
+.view-more {
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 5%;
+    letter-spacing: 5px;
+}
+
+.timeline-container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    
+}
+
+.scroll-container {
+
+    p {
+        font-family: "Cinzel", serif;
+        font-size: 30px;
+        font-weight: normal;
+        letter-spacing: 5px;
+    }
+
+    display: inline-flex; 
+    overflow-x: auto; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.year, .box {
+    display: inline-block; 
+    margin-right: 1%; 
+    margin-left: 1%; 
+}
+
+.year {
+    font-size: 24px; 
+    align-self: center; 
+}
+
+.box {
+    font-family: "Cormorant", serif;
+    font-size: 26px;
+    min-width: 260px; 
+    height: 350px; 
+    background-color: #cfd8dc; 
+    border-radius: 40px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.box-112 { background-color: #CBE4FF; } 
+.box-131 { background-color: #BCDEFD; } 
+.box-279 { background-color: #E8E0FF; }
+.box-432 { background-color: #E8E9FF; }
+.box-410 { background-color: #BCBCE4; }
+.box-XHack { background-color: #CBE4FF; }
+.box-490 { background-color: #BCDEFD; }
+
+/* Pop-up Window */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fff; 
+    margin: 15% auto; 
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px; 
+    width: 60%; 
+    height: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
+
+.course-info {
+    padding-top: 5%;
+    font-size: 28px;
+    font-family: "Cinzel", serif;
+}
+
+.project-description {
+    padding-top: 5%;
+    font-size: 28px;
+    font-family: "Cormorant", serif;
+    font-size: 20px;
+}
+
+.close {
+    color: #000; 
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #999; 
+}
+
+.modal-content h2 {
+    color: #333; 
+    font-size: 24px; 
+}
+
+.modal-content p {
+    color: #555; 
+    margin-bottom: 20px; 
+}
+
+.hashtags{
+    padding-top: 5%;
+}
+
+.hashtags .hashtag {
+    display: inline-block;
+    background-color: #e7e7e7; 
+    color: #333; 
+    padding: 5px 15px;
+    margin: 0 3% 10% 0; 
+    border-radius: 5px; 
+    font-size: 14px; 
+}
+
+/* responsive design */
+
+@media (max-width: 600px){
+
+    /* Nav Bar */
+
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fff; 
+        z-index: 10; 
+        box-shadow: 0 1px 5px rgba(0,0,0,0.2);  
+        
+        padding-top: 1%; 
+        padding-bottom: 1%; 
+        padding-left: 3%;
+    
+        p {
+            font-family: "Cinzel", serif;
+            font-size: 14px;
+            font-weight: normal;
+            letter-spacing: 5px;
+        }
+    
+        a {
+            text-decoration: none; 
+            color: inherit; 
+        }
+    
+    }
+    
+    .section-title{
+        padding-top: 5%;
+        font-family: "Cinzel", serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin-left: 5%;
+        letter-spacing: 5px;
+    }
+
+    /* Main Page */
+
+    .main-container {
+        flex-direction: column;
+        padding-left: 5%; 
+        padding-right: 5%;
+    }
+
+    .background-square {
+        width: 100%;
+        height: auto;
+        position: relative; 
+    }
+
+    .intro, .profile {
+        flex: none; 
+        width: 80%; 
+        text-align: center; 
+        order: 2; 
+        padding-top: 20%;
+    }
+
+    .profile {
+        order: 1; 
+    }
+
+    .greeting p {
+        padding-top: 10%;
+    }
+
+    .intro > p{
+        font-size: 0.5em;
+    }
+
+    .intro > p:first-of-type {
+        margin-top: 20%; 
+    }
+
+    .intro > p:last-of-type {
+        margin-bottom: 20%; 
+    }
+
+    .arrow-down {
+        display: none;
+    }
+    
+    .intro .greeting {
+        font-size: 2em; 
+    }
+
+    /* About Me */
+
+    .about-me-content {
+
+        display: flex;
+        flex-direction: column; 
+        align-items: center;     
+        position: relative;
+        padding: 10%;
+            
+        > p {
+            text-align: left;
+        }         
+    }
+    
+    .intro-overview {
+        order: 1;
+        position: relative; 
+        top: 0;
+        left: 0;
+        text-align: justify;
+    }
+    
+    .dallas {
+        order: 2;
+        width: 70%;  
+        height: auto;  
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 10%;
+        margin-bottom: 10%
+    }
+    
+    .intro-research {
+        order: 3;
+        width: 90%; 
+        position: relative; 
+        top: 0;
+        left: 0;  
+    }
+    
+    .intro-intern {
+        order: 4;
+        width: 90%;  
+        position: relative; 
+        top: 0;
+        left: 0;
+    }
+    
+    .miami {
+        order: 5;
+        width: 90%; 
+        height: auto;  
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 10%;
+        margin-bottom: 10%
+    }
+    
+    .intro-daily {
+        order: 6;
+        width: 90%;  
+        position: relative; 
+        top: 0;
+        left: 0;
+        text-align: center; 
+    }
+    
+    .alaska, .savannah, .la{
+        display: none;
+    }
+
+    /* Featured Project */
+
+    .view-more {
+        font-family: "Cinzel", serif;
+        font-size: 10px;
+        font-weight: normal;
+        text-align: right;
+        padding-top: 5%;
+        padding-right: 5%;
+        letter-spacing: 5px;
+    }
+
+    .scroll-container {
+
+        p {
+            font-family: "Cinzel", serif;
+            font-size: 15px;
+            font-weight: normal;
+            letter-spacing: 5px;
+        }
+    
+        display: inline-flex; 
+        overflow-x: auto; 
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+    }
+    
+    .box {
+        font-family: "Cormorant", serif;
+        font-size: 18px;
+        min-width: 200px; 
+        height: 260px; 
+        background-color: #cfd8dc; 
+        border-radius: 40px; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    .box-112 { background-color: #CBE4FF; } 
+    .box-131 { background-color: #BCDEFD; } 
+    .box-279 { background-color: #E8E0FF; }
+    .box-432 { background-color: #E8E9FF; }
+    .box-410 { background-color: #BCBCE4; }
+    .box-XHack { background-color: #CBE4FF; }
+    .box-490 { background-color: #BCDEFD; }
+
+
+
+    /* Pop-up Windows */
+
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 100; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+    
+    .modal-content {
+        background-color: #fff; 
+        margin: 15% auto; 
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-radius: 10px; 
+        width: 80%; 
+        height: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    }
+    
+    .course-info {
+        padding-top: 5%;
+        font-size: 20px;
+        font-family: "Cinzel", serif;
+    }
+    
+    .project-description {
+        padding-top: 5%;
+        font-size: 14px;
+        font-family: "Cormorant", serif;
+        font-size: 14px;
+    }
+    
+    .close {
+        color: #000; 
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #999; 
+    }
+    
+    .modal-content p {
+        color: #555; 
+        margin-bottom: 18px; 
+    }
+    
+    .hashtags{
+        padding-top: 5%;
+    }
+    
+    .hashtags .hashtag {
+        display: inline-block;
+        background-color: #e7e7e7; 
+        color: #333; 
+        padding: 5px 15px;
+        margin: 0 3% 10% 0; 
+        border-radius: 5px; 
+        font-size: 10px; 
+    }
+
+
+}
