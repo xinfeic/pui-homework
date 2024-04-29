@@ -1,3 +1,36 @@
+// HELPER: redirecting from hashtags to specific gallery page
+
+function redirectToGallery(hashtag) {
+  let url = '';
+  switch(hashtag) {
+      case '#PythonDevelopment':
+      case '#GameProgramming':
+      case '#AlgorithmDesign':
+      case '#FrontEndDevelopment':
+      case '#LearningScience':
+      case '#StatisticalAnalysis':
+      case '#MachineLearning':
+      case '#CognitiveScience':
+          url = 'project_gallery_csds.html';
+          break;
+      case '#UXDesign':
+      case '#AlgorithmBias':
+      case '#WearableTech':
+          url = 'project_gallery_design.html';
+          break;
+      case '#MediaStudies':
+      case '#CulturalStudies':
+      case '#VirtualReality':
+          url = 'project_gallery_others.html';
+          break;
+      default:
+          console.error('Hashtag does not match any gallery');
+          return;
+  }
+  window.location.href = url; 
+}
+
+
 class ProjectModalManager {
     constructor() {
         this.projectContent = {
@@ -19,7 +52,7 @@ class ProjectModalManager {
           'box-432': {
             courseInfo: "05-432 <br> Bayes Cognitive Tutor",
             description: "The Bayesian Theorem Cognitive Tutor aids novices in mastering probability-related symbolic representations through nine distinct question types and 40 comprehensive problems, enhancing understanding and application skills in the Bayesian Theorem efficiently.",
-            hashtags: ["#FrontEndDevelopment", "#LearningScience"]
+            hashtags: ["#FrontEndDevelopment", "#UXDesign", "#LearningScience"]
           },
           'box-410': {
             courseInfo: "05-410 <br> Bias Buster",
@@ -38,21 +71,22 @@ class ProjectModalManager {
           }
         };
       }
-      
-  
+    
     openModal(projectClass) {
-        const content = this.projectContent[projectClass];
-        if (content) {
-            document.querySelector('.course-info').innerHTML = content.courseInfo;
-            document.querySelector('.project-description').innerHTML = content.description;
-            const hashtagsHTML = content.hashtags.map(hashtag => `<span class="hashtag">${hashtag}</span>`).join('');
-            document.querySelector('.hashtags').innerHTML = hashtagsHTML;
-            document.getElementById('jumperMazeModal').style.display = 'block';
-        }
+      const content = this.projectContent[projectClass];
+      if (content) {
+          document.querySelector('.course-info').innerHTML = content.courseInfo;
+          document.querySelector('.project-description').innerHTML = content.description;
+          const hashtagsHTML = content.hashtags.map(hashtag =>
+              `<span class="hashtag" onclick="redirectToGallery('${hashtag}')">${hashtag}</span>`
+          ).join('');
+          document.querySelector('.hashtags').innerHTML = hashtagsHTML;
+          document.getElementById('PopUpWindow').style.display = 'block';
+      }
     }
   
     closeModal() {
-        document.getElementById('jumperMazeModal').style.display = 'none';
+        document.getElementById('PopUpWindow').style.display = 'none';
     }
 }
   
@@ -80,19 +114,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 });
 
-
-// Greeting
-
-// var typed = new Typed('#greeting', {
-//     strings: ["Hi, I'm Xinfei", "Hi, I'm daydreaming"],
-//     typeSpeed: 30
-//   });
-
 var typed = new Typed("#greeting", {
     strings: ["Xinfei", "Coding", "Modeling", "daydreaming"],
     typeSpeed: 150, 
     backSpeed: 150, 
     loop: true
 })
+
+
+
+
   
 
