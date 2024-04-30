@@ -91,35 +91,40 @@ class ProjectModalManager {
 }
   
 const modalManager = new ProjectModalManager();
-  
+
 document.addEventListener('DOMContentLoaded', function () {
-    
-    var btns = document.querySelectorAll('.box');
-    var close = document.querySelector('.modal .close');
   
-    btns.forEach(btn => {
+  var modal = document.getElementById('PopUpWindow');
+  var btns = document.querySelectorAll('.box');
+  
+  btns.forEach(btn => {
       btn.onclick = function() {
-        modalManager.openModal(this.classList[1]);
+          modalManager.openModal(this.classList[1]);
       };
-    });
+  });
   
-    close.onclick = function() {
+  var close = document.querySelector('.modal .close');
+  close.onclick = function() {
       modalManager.closeModal();
-    };
+  };
   
-    window.onclick = function(event) {
+  // Close Pop-up Window
+  window.onclick = function(event) {
       if (event.target === modal) {
-        modalManager.closeModal();
+          modalManager.closeModal();
       }
-    };
+  };
 });
 
-var typed = new Typed("#greeting", {
-    strings: ["Xinfei", "Coding", "Modeling", "daydreaming"],
-    typeSpeed: 150, 
-    backSpeed: 150, 
-    loop: true
-})
+document.addEventListener('DOMContentLoaded', function() {
+  var typed = new Typed("#greeting", {
+      strings: ["Xinfei", "Coding", "Modeling", "Daydreaming"],
+      typeSpeed: 150, 
+      backSpeed: 150, 
+      loop: true
+  });
+});
+
 
 
 

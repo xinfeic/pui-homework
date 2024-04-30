@@ -7,16 +7,6 @@ p {
     font-family: "Cormorant", serif;
 }
 
-.section-title{
-    padding-top: 5%;
-    font-family: "Cinzel", serif;
-    font-size: 187.5%;
-    font-weight: normal;
-    margin-left: 5%;
-    letter-spacing: 5px;
-}
-
-
 .nav-bar {
     position: fixed;
     width: 100%;
@@ -41,6 +31,23 @@ p {
     }
 
 }
+
+.section-title {
+    padding-top: 5%;
+    font-family: "Cinzel", serif;
+    font-size: 187.5%;
+    font-weight: normal;
+    margin-left: 5%;
+    letter-spacing: 5px;
+}
+
+/* testing */
+
+
+  
+
+/* testing */
+
 
 /* Main Page */
 
@@ -315,6 +322,20 @@ p {
     letter-spacing: 5px;
 }
 
+/* For back to main on the gallery page */
+a.back-to-main {
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5%;
+    padding-right: 5%;
+    letter-spacing: 5px;
+    text-decoration: none; 
+    color: inherit;
+}
+
 .timeline-container {
     padding-top: 5%;
     padding-bottom: 10%;
@@ -354,35 +375,6 @@ p {
     align-self: center; 
 }
 
-/* .box {
-    font-family: "Cormorant", serif;
-    font-size: 26px;
-    min-width: 260px; 
-    height: 375px; 
-    background-color: #cfd8dc; 
-    border-radius: 40px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-} */
-
-
-
-/* .box-card_new { background-color: #CBE4FF; } 
-.box-131 { background-color: #BCDEFD; } 
-.box-279 { background-color: #E8E0FF; }
-.box-432 { background-color: #E8E9FF; }
-.box-410 { background-color: #BCBCE4; }
-.box-XHack { background-color: #CBE4FF; }
-.box-490 { background-color: #BCDEFD; } */
-
-
-/* .card {
-    width: 100%;
-} */
-
-/* testing */
 .project-card{
     position: relative;
     min-width: 260px;
@@ -456,7 +448,6 @@ p {
   display: block;
   margin-top: 5px;
    } 
-/* testing */
 
 
 /* Pop-up Window */
@@ -535,6 +526,100 @@ p {
     border-radius: 5px; 
     font-size: 14px; 
 }
+
+
+
+
+
+
+
+
+
+/* specific gallary * 3 */
+
+nav {
+    &#category-select {
+      margin: 0 auto;
+      display: block;
+      padding: 0px 0 0 0;  
+      font-family: "Cinzel", serif;
+      font-size: 66%;
+  
+      ul li {
+        list-style: none;
+        margin: 0 auto;
+        border-left: 2px solid #3ca0e7;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: "Cinzel", serif;
+      }
+  
+      li a {
+        color: black;
+        font-size: 100%;
+      }
+  
+      li a:hover {
+        color: #3ca0e7;
+      }
+  
+      li:hover {
+        cursor: pointer;
+      }
+  
+      ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+        display: none;
+        background: white;
+      }
+  
+      ul li:hover > ul,
+      ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        min-width: 110%;
+        text-align: left;
+        padding-top: 20px;
+        box-shadow: 0px 3px 5px -1px #ccc;
+      }
+  
+      ul li ul li {
+        clear: both;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        border-style: none;
+      }
+  
+      ul li ul li a:hover {
+        padding-left: 10px;
+        border-left: 2px solid #3ca0e7;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  a {
+  
+      text-decoration: none;
+  
+      &:hover {
+          color: #3CA0E7;
+      }
+   
+  }
+  
+   ul li ul li a { transition: all 0.5s ease; }
+  
+   
 
 /* responsive design */
 
@@ -644,6 +729,7 @@ p {
     
     .intro-overview {
         order: 1;
+        width: 90%; 
         position: relative; 
         top: 0;
         left: 0;
@@ -703,7 +789,7 @@ p {
 
     /* Featured Project */
 
-    .view-more {
+    .view-more, a.back-to-main {
         font-family: "Cinzel", serif;
         font-size: 10px;
         font-weight: normal;
@@ -721,12 +807,25 @@ p {
             font-weight: normal;
             letter-spacing: 5px;
         }
-    
+        
+        padding-top: 10%;
         display: inline-flex; 
         overflow-x: auto; 
         -ms-overflow-style: none; 
         scrollbar-width: none; 
     }
+
+
+    .project-card{
+        position: relative;
+        min-width: 182px;
+        height: 262.5px;
+        background: #fff;
+        margin: 40px;
+        border-radius: 4px;
+        box-shadow:0 2px 10px rgba(0,0,0,.2);
+      }
+
     
     /* Pop-up Windows */
 

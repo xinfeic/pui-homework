@@ -11,14 +11,31 @@
         <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
         <script defer src="js/app.js"></script>
+        <script defer src="js/gallery.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     </head>
 
     <body>
-        <p class="section-title">FEATURED PROJECTS - others</p>
 
-        <p class="view-more">Back to Main</p>
+        <div class="section-title">
+            FEATURED PROJECTS - Others
+        
+            <nav id="category-select">
+                <ul>
+                    <li><a href="#">Categories &dtrif;</a>
+                        <ul class="dropdown">
+                            <li value="programming"><a href="project_gallery_csds.html">Programming / Data Science</a></li>
+                            <li value="ux-design"><a href="project_gallery_design.html">UX Design</a></li>
+                            <li value="others"><a href="project_gallery_others.html">Others</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <a href="main.html#featured-projects" class="back-to-main">Back to Main Page</a>
 
         <div class="timeline-container">
             <div class="scroll-container">
